@@ -10,7 +10,7 @@
     "require": {
         "php": "^8.0.2",
         "ext-gd": "*",
-        "ext-swoole": "^4.8",
+        "ext-swoole": "*",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.11",
         "laravel/octane": "^1.2",
