@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Jobs\SendAnniversary;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('job', function () {
+    SendAnniversary::dispatch();
+    return ['status' => true];
 });
 
 Route::get('import', [UserController::class, 'import']);
