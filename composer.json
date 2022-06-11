@@ -9,10 +9,14 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "ext-gd": "*",
+        "ext-swoole": "^4.8",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.11",
+        "laravel/octane": "^1.2",
         "laravel/telescope": "^4.9",
         "maatwebsite/excel": "^3.1",
+        "predis/predis": "^2.0",
         "psr/simple-cache": "^1.0"
     },
     "require-dev": {
@@ -45,7 +49,8 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ]
+        ],
+        "dev": "php artisan octane:start --workers=1 --task-workers=1 --watch"
     },
     "extra": {
         "laravel": {

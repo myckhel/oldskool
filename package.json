@@ -1,0 +1,7 @@
+{
+  "name": "oldskool",
+  "packageManager": "yarn@3.1.1",
+  "dependencies": {
+    "chokidar": "^3.5.3"
+  }
+}
