@@ -25,3 +25,4 @@ Route::get('job', function () {
 });
 
 Route::get('import', [UserController::class, 'import']);
+Route::get('import/admin', [UserController::class, 'importAdmin']);
