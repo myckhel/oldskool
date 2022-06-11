@@ -17,7 +17,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->job(new SendAnniversary)
-            ->hourly()
+            ->everyFiveMinutes()
             // ->daily()
             // ->at('09:00')
             // ->at('09:00')
