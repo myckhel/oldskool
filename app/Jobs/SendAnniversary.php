@@ -58,6 +58,6 @@ class SendAnniversary implements ShouldQueue
 
         $users = $wedusers->merge($bdusers);
 
-        Admin::get()->map(fn ($admin) => $admin->notify(new NotifyUpcomingAnniversary($users)));
+        sizeof($users) && Admin::get()->map(fn ($admin) => $admin->notify(new NotifyUpcomingAnniversary($users)));
     }
 }
